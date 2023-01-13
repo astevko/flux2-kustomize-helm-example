@@ -11,8 +11,8 @@ flux bootstrap github \
 ```
 ## copy staging to docker-desktop
 ```
-cp clusters/staging/infrastructure.yaml clusters/dev
-cp clusters/staging/apps.yaml clusters/dev
+cp clusters/staging/infrastructure.yaml clusters/docker-desktop
+cp clusters/staging/apps.yaml clusters/docker-desktop
 ```
 ## get the public key from the controller
 ```
@@ -34,7 +34,6 @@ kubeseal --format=yaml --cert=pub-sealed-secrets.pem \
 / # cat /opt/secrets2/etherium-api-key
 xxxxxxx
 ```
-
 
 # Note This method of securing keys using bitnami's sealed-secrets exposes the unencrypted secret to the k8s control plane.
 ```
