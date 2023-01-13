@@ -1,0 +1,15 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: etherium-api-key
+  namespace: test-secrets
+spec:
+  encryptedData:
+    etherium-api-key: AgDXOuAsRDMgtzkaJM3+U8V3giGiKnpqmhev5/0LaGmOAx2ZslkiGlYAC+be+6asxR3ynOYU8JGyNV47WEYpbqExap2kMQuSnYecYKHVnQjwC39tWLPWi0VcCclafiYiBPjX0oHzPRPydar+Ky2c1zWA5iI7bzCtxGpQ4Av9m1BMpKFbkNfHljj6NObxcXox4pXF6XZz6WPclpWhFv+sswRiqQGWKIO/HkmFT927sJ7IYY+/mWMEjL0gSfGa+rYJqLazI1TLlyKp92D+qMDa3KKectMxCDBNcb+ITO9p6G8slDjCxyuaWGYYmDEUEn/ev/0honsb+b+eXiNPXgnVk7WvWO7RZgTlecEM0iETLD1RcejDsUBxGOFfUcluVVb5Nmf75t0QOmIxpM4OVrs2gfSMHVZDHn6f9G+bKCRp/Gm5Y3kyUwQ1JR3Sb07AAQK4hkcapbktCQ4ZVr+AjA2TtejfIhKiFv4mTsrFxrGfEzaLy2rhytlOyoW9/GiT56nrll4s+0rW6PieEIfbD+vxbP0O1PZ2IhYcoOlZCExU0yTNIa53Kqj5uZg5PojPvv11t/Nx3NhPGzyYkdZta87NL8EK7/wlPG9oAePIvlKQb5Lc2/8tUO0008R6BAeZasAmkuKqkf0h1r+wP6hKmoljj5eGB+ZDmXVGDBhPH3TP7LTWuhAOtNHibzqmYM0DT4hign7AHs1ViQwKK3gThgCWaeGykiKJnmWQgmzwkYMqLnsmeIc5
+  template:
+    metadata:
+      creationTimestamp: null
+      name: etherium-api-key
+      namespace: test-secrets
+

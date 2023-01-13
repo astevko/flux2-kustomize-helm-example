@@ -14,3 +14,12 @@ flux bootstrap github \
 cp clusters/staging/infrastructure.yaml clusters/dev
 cp clusters/staging/apps.yaml clusters/dev
 ```
+## get the public key from the controller
+```
+kubeseal --fetch-cert \
+--controller-name=sealed-secrets \
+--controller-namespace=flux-system \
+> pub-sealed-secrets.pem
+```
+
+## Seal the secret...
