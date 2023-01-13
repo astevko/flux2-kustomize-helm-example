@@ -23,3 +23,7 @@ kubeseal --fetch-cert \
 ```
 
 ## Seal the secret...
+```
+kubeseal --format=yaml --cert=pub-sealed-secrets.pem \
+< etherium-api-key.yaml > etherium-api-key-sealed.yaml
+```
