@@ -11,5 +11,5 @@ spec:
     metadata:
       creationTimestamp: null
       name: etherium-api-key
-      namespace: test-secrets
+      namespace: default
 
