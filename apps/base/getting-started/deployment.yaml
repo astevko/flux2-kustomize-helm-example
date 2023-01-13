@@ -1,0 +1,61 @@
+# https://www.docker.com/blog/how-kubernetes-works-under-the-hood-with-docker-desktop/
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: test-secrets
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-secrets
+spec:
+  ports:
+      - name: 80-tcp
+        port: 80
+        protocol: TCP
+        targetPort: 80
+  selector:
+       com.docker.project: test-secrets
+  type: LoadBalancer
+status:
+  loadBalancer: {}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+   com.docker.project: test-secrets
+  name: test-secrets
+spec:
+  replicas: 1
+  selector:
+   matchLabels:
+       com.docker.project: test-secrets
+  strategy:
+   type: Recreate
+  template:
+   metadata:
+       labels:
+           com.docker.project: test-secrets
+   spec:
+       containers:
+         - image: docker/getting-started
+           name: test-secrets
+           ports:
+            - containerPort: 80
+              protocol: TCP
+           resources: {}
+           volumeMounts:
+             - mountPath: "/opt/secrets"
+               name: my-secret
+               readOnly: true
+       restartPolicy: Always
+       volumes:
+         - name: my-secret
+           secret:
+             secretName: my-secret
+             optional: false # default setting; "mysecret" must exist
+status: {}
+
