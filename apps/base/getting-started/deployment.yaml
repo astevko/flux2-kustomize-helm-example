@@ -46,7 +46,7 @@ spec:
              - mountPath: "/opt/secrets"
                name: my-secret
                readOnly: true
-             - mountPath: "/opt/secrets"
+             - mountPath: "/opt/secrets2"
                name: etherium-api-key
                readOnly: true
        restartPolicy: Always
