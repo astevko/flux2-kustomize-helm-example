@@ -55,7 +55,6 @@ spec:
            secret:
              secretName: my-secret
              optional: false # default setting; "mysecret" must exist
-       volumes:
          - name: etherium-api-key
            secret:
              secretName: etherium-api-key
