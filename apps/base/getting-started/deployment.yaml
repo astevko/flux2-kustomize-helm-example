@@ -24,7 +24,7 @@ metadata:
    com.docker.project: test-secrets
   name: test-secrets
 spec:
-  replicas: 1
+  replicas: 3
   selector:
    matchLabels:
        com.docker.project: test-secrets
