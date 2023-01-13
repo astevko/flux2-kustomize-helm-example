@@ -1,11 +1,6 @@
 # https://www.docker.com/blog/how-kubernetes-works-under-the-hood-with-docker-desktop/
 ---
 apiVersion: v1
-kind: Namespace
-metadata:
-  name: test-secrets
----
-apiVersion: v1
 kind: Service
 metadata:
   name: test-secrets
