@@ -46,11 +46,19 @@ spec:
              - mountPath: "/opt/secrets"
                name: my-secret
                readOnly: true
+             - mountPath: "/opt/secrets"
+               name: etherium-api-key
+               readOnly: true
        restartPolicy: Always
        volumes:
          - name: my-secret
            secret:
              secretName: my-secret
+             optional: false # default setting; "mysecret" must exist
+       volumes:
+         - name: etherium-api-key
+           secret:
+             secretName: etherium-api-key
              optional: false # default setting; "mysecret" must exist
 status: {}
 
